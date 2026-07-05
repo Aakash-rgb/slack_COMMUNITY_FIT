@@ -9,27 +9,8 @@ A Slack bot that monitors new members, researches them, and posts AI-generated f
 - Stores analysis results in PostgreSQL
 - Posts summaries to a private Slack channel
 ## Architecture
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   Slack API     │───▶│  Slack Service   │───▶│ Member Research │
-│ (New Members)   │    │  (Event Handler) │    │    Service      │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-                                                          │
-                                                          ▼
-                                                ┌─────────────────┐
-                                                │ OpenAI/Langchain│
-                                                └────────┬────────┘
-                                                         │
-                       ┌──────────────────┐              │
-                       │  Analysis Report │◀─────────────┘
-                       │   Generator      │
-                       └───────┬──────────┘
-                               │
-                    ┌──────────┴──────────┐
-                    ▼                     ▼
-          ┌─────────────────┐   ┌─────────────────┐
-          │   PostgreSQL    │   │ Private Channel │
-          │  (Render.com)   │   │  (Slack Bot)    │
-          └─────────────────┘   └─────────────────┘
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/8ef3aec1-3f24-470c-83dc-749e45439307" />
+
 ## Prerequisites
 Node.js 18+
 OpenAI API key
