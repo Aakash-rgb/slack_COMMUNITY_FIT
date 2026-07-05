@@ -39,7 +39,21 @@ Render.com account (for deployment and database)
 | `NODE_ENV`                 |     ❌    | Environment mode (`development` enables debug logging and test endpoints). |
 | `PORT`                     |     ❌    | Express server port (default: `3000`).                                     |
 
-Analysis Output
+## Analysis Output
+
+| Output                      | Description                                                                               |
+| --------------------------- | ----------------------------------------------------------------------------------------- |
+| **Member Profile**          | Summary of the new Slack member's publicly available profile.                             |
+| **Professional Background** | Current role, work experience, education, and skills.                                     |
+| **Company Information**     | Details about the member's current organization, if available.                            |
+| **Technology Stack**        | Programming languages, frameworks, and tools identified from public sources.              |
+| **Social Presence**         | Links and insights from GitHub, LinkedIn, X (Twitter), personal websites, etc.            |
+| **AI Analysis Report**      | Structured report generated using OpenAI/LangChain with key insights and recommendations. |
+| **Confidence Score**        | Estimated confidence level based on the amount and quality of available public data.      |
+| **Timestamp**               | Date and time when the analysis was generated.                                            |
+| **Database Record**         | Complete analysis stored in PostgreSQL for future reference and auditing.                 |
+| **Slack Notification**      | Formatted report automatically posted to the configured private Slack channel.            |
+
 
 ## Notes
 - Keep your .env file private and do not commit it.
