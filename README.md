@@ -24,19 +24,21 @@ Render.com account (for deployment and database)
 3. Start the app:
    npm start
 ## Environment Variables
-Variable	               Required	       Description
-SLACK_BOT_TOKEN	        ✅	          Bot token from Slack app (starts with xoxb-)
-SLACK_APP_TOKEN	        ✅	          App-level token for Socket Mode (starts with xapp-)
-SLACK_SIGNING_SECRET	     ✅	          Signing secret from Slack app
-SLACK_PRIVATE_CHANNEL_ID  ✅	          Channel ID where reports are sent
-OPENAI_API_KEY	           ✅	          OpenAI API key
-DATABASE_URL	           ✅	          Render.com PostgreSQL external database url
-COMPANY_NAME	           ❌	          Your company name (used in AI analysis prompt)
-COMPANY_PRODUCT	        ❌	          Your product name (used in AI analysis prompt)
-COMPANY_WEBSITE	        ❌	          Your company website URL
-COMPANY_DESCRIPTION	     ❌	          Brief description of your company
-NODE_ENV	                 ❌	          Set to development to enable debug logging and test endpoint
-PORT	                    ❌	          Express server port (default 3000)
+| Variable                   | Required | Description                                                                |
+| -------------------------- | :------: | -------------------------------------------------------------------------- |
+| `SLACK_BOT_TOKEN`          |     ✅    | Bot token from the Slack app (starts with `xoxb-`).                        |
+| `SLACK_APP_TOKEN`          |     ✅    | App-level token for Socket Mode (starts with `xapp-`).                     |
+| `SLACK_SIGNING_SECRET`     |     ✅    | Signing secret from the Slack app used to verify incoming requests.        |
+| `SLACK_PRIVATE_CHANNEL_ID` |     ✅    | Slack channel ID where analysis reports are posted.                        |
+| `OPENAI_API_KEY`           |     ✅    | OpenAI API key used for AI-powered analysis.                               |
+| `DATABASE_URL`             |     ✅    | External PostgreSQL database connection URL (e.g., Render.com PostgreSQL). |
+| `COMPANY_NAME`             |     ❌    | Company name used to provide context in AI analysis prompts.               |
+| `COMPANY_PRODUCT`          |     ❌    | Product or service name used to improve AI-generated analysis.             |
+| `COMPANY_WEBSITE`          |     ❌    | Company website URL for contextual information.                            |
+| `COMPANY_DESCRIPTION`      |     ❌    | Brief description of the company used in AI prompts.                       |
+| `NODE_ENV`                 |     ❌    | Environment mode (`development` enables debug logging and test endpoints). |
+| `PORT`                     |     ❌    | Express server port (default: `3000`).                                     |
+
 Analysis Output
 
 ## Notes
